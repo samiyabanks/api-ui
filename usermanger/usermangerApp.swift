@@ -25,7 +25,7 @@ struct usermangerApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            UsersListView()
         }
         .modelContainer(sharedModelContainer)
     }

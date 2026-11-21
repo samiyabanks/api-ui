@@ -11,7 +11,45 @@
     ],
   },
   "files": [
-    { "kind": "folder", "path": "usermanger", "target-membership": [ "usermanger" ] },
+    {
+      "kind": "group",
+      "path": "viewmodels",
+      "children": [
+        { "path": "UsersViewModel.swift", "target-membership": [ "usermanger/compile-sources" ] },
+      ],
+    }, {
+      "kind": "group",
+      "path": "views",
+      "children": [
+        { "path": "UsersListView.swift", "target-membership": [ "usermanger/compile-sources" ] },
+      ],
+    }, {
+      "kind": "group",
+      "path": "networking",
+      "children": [
+        { "path": "APIClient.swift", "target-membership": [ "usermanger/compile-sources" ] },
+      ],
+    }, {
+      "kind": "group",
+      "path": "models",
+      "children": [
+        { "path": "User.swift", "target-membership": [ "usermanger/compile-sources" ] },
+      ],
+    }, {
+      "kind": "folder",
+      "path": "usermanger",
+      "target-membership": [
+        "usermanger",
+      ],
+      "membership-exceptions": [
+        {
+          "target": "usermanger",
+          "exclusions": [
+            "Info.plist",
+          ],
+        },
+      ],
+    },
     { "kind": "folder", "path": "usermangerTests", "target-membership": [ "usermangerTests" ] },
     { "kind": "folder", "path": "usermangerUITests", "target-membership": [ "usermangerUITests" ] },
     {
@@ -44,6 +82,7 @@
         "ENABLE_PREVIEWS": "YES",
         "ENABLE_USER_SELECTED_FILES": "readonly",
         "GENERATE_INFOPLIST_FILE": "YES",
+        "INFOPLIST_FILE": "usermanger/Info.plist",
         "INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]": "YES",
         "INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]": "YES",
         "INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]": "YES",
